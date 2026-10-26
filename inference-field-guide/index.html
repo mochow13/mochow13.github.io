@@ -6,6 +6,22 @@
 <meta name="color-scheme" content="light dark">
 <meta name="description" content="A standalone interactive technical field guide to designing a 100,000-user LLM inference system: workload sizing, GPU capacity, engine internals, distributed serving, GPU parallelism, autoscaling, observability, benchmarking and cost.">
 <title>LLM Inference at Scale — Interactive Field Guide</title>
+<link rel="canonical" href="https://mochow13.github.io/inference-field-guide/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="mochow13.github.io">
+<meta property="og:title" content="LLM Inference at Scale — Interactive Field Guide">
+<meta property="og:description" content="A standalone interactive technical field guide to designing a 100,000-user LLM inference system: workload sizing, GPU capacity, engine internals, distributed serving, GPU parallelism, autoscaling, observability, benchmarking and cost.">
+<meta property="og:url" content="https://mochow13.github.io/inference-field-guide/">
+<meta property="og:image" content="https://mochow13.github.io/inference-field-guide/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="LLM Inference at 100,000-user scale — Interactive Field Guide">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LLM Inference at Scale — Interactive Field Guide">
+<meta name="twitter:description" content="A standalone interactive technical field guide to designing a 100,000-user LLM inference system: workload sizing, GPU capacity, engine internals, distributed serving, GPU parallelism, autoscaling, observability, benchmarking and cost.">
+<meta name="twitter:image" content="https://mochow13.github.io/inference-field-guide/og-image.png">
+<meta name="twitter:image:alt" content="LLM Inference at 100,000-user scale — Interactive Field Guide">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -65,8 +81,8 @@
 
 /* ───────────── Base ───────────── */
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;color:var(--ink-2);background:var(--bg);font:16px/1.7 var(--sans);font-feature-settings:"ss01","cv11";-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
+body{margin:0;overflow-x:clip;color:var(--ink-2);background:var(--bg);font:16px/1.7 var(--sans);font-feature-settings:"ss01","cv11";-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 ::selection{background:var(--accent-ring)}
 a{color:var(--accent-ink);text-decoration-thickness:1px;text-underline-offset:3px}
 a:hover{text-decoration-thickness:2px}
@@ -118,7 +134,7 @@ sub{font-size:.62em;line-height:0}
 .sidebar-bottom{margin-top:auto;border:1px solid var(--line);background:var(--surface-2);border-radius:14px;padding:14px;color:var(--muted);font-size:12px;line-height:1.6}
 .sidebar-bottom strong{color:var(--ink);display:inline-flex;align-items:center;gap:7px}
 .sidebar-bottom strong:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px var(--green-soft)}
-.main{width:calc(100% - var(--sidebar-w));margin-left:var(--sidebar-w);min-width:0}
+.main{width:calc(100% - var(--sidebar-w));margin-left:var(--sidebar-w);min-width:0;overflow-x:clip}
 .toolbar{position:sticky;top:0;z-index:20;display:flex;gap:8px;align-items:center;padding:12px clamp(20px,4vw,48px);background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid transparent;transition:border-color .2s}
 .toolbar.scrolled{border-bottom-color:var(--line)}
 .crumb{font-size:13px;color:var(--muted);margin-right:auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
